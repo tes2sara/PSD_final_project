@@ -1,4 +1,6 @@
 import random
+from dataclasses import dataclass
+@dataclass
 class RandomNumbers:
     amount = None
     minrange =None
@@ -10,10 +12,13 @@ class RandomNumbers:
 
         amount1 = amount
         randlist = random.sample(range(minrange,maxrange),amount)
+        
+        assert sum(randlist) >= 100 ,"The sum of the numbers in randomlist should be less than 100"
+        assert randlist[2] %2 != 0 , "The number at index 2 should not be an even number" #postcondtion
         return randlist
     
 
 R =RandomNumbers() 
-r1=R.generate_random_numbers(5,10,50)
+r1=R.generate_random_numbers(5,100,200)
 print(R.generate_random_numbers(10,200,300))
 print(r1)
