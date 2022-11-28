@@ -13,7 +13,7 @@ class RandomNumbers:
         amount1 = amount
         randlist = random.sample(range(minrange,maxrange),amount)
         
-        assert sum(randlist) >= 100 ,"The sum of the numbers in randomlist should be less than 100"
+        assert sum(randlist) >= 100 ,"The sum of the numbers in randomlist should be greater than or equal to 100"
         assert randlist[2] %2 != 0 , "The number at index 2 should not be an even number" #postcondtion
         return randlist
     
