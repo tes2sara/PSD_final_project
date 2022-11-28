@@ -1,0 +1,1 @@
+This project is done for final course assigmnent. It creates a range of random intgers set by the amount, minrange, and maxrange that is passed in the parameter. It also has two pre and post condtions applied to it. 
